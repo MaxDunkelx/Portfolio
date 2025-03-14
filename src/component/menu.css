@@ -1,0 +1,85 @@
+/* Menu Bar Container */
+.menu-bar {
+    position: absolute; /* Center the menu initially */
+    top: 10px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+  
+    background: linear-gradient(135deg, rgba(28, 61, 115, 0.9), rgba(201, 164, 107, 0.7));
+    backdrop-filter: blur(1px);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; /* Push elements to the right */
+    align-items: center;
+    z-index: 1000;
+    direction: rtl; /* Right-to-left for Hebrew */
+    transition: all 0.3s ease; /* Smooth transition for collapsing */
+    border-radius: 15px;
+  }
+  
+  /* Collapsed State */
+  .menu-bar.collapsed {
+    position: fixed; /* Stick to the viewport */
+    top: 20px;
+    left: auto; /* Reset left positioning */
+    right: -25px; /* Stick to the right */
+    transform: none; /* Remove centering transform */
+    width: 200px; /* Smaller width when collapsed */
+    border-radius: 40px;
+  }
+  
+  /* Menu Buttons */
+  .menu-bar .menu-buttons button {
+    background: rgba(201, 164, 107, 0.2); /* Light golden background */
+    border: 1px solid #c9a46b; /* Golden border */
+    color: rgb(255, 255, 255); /* White text color */
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 100px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .menu-bar .menu-buttons button:hover {
+    background: rgba(201, 164, 107, 0.4); /* Slightly darker golden background on hover */
+    color: white; /* Keep text white on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  /* Menu Buttons Container */
+  .menu-buttons {
+    display: flex;
+    gap: 20px;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for hiding */
+  }
+  
+  /* Hidden State for Menu Buttons */
+  .menu-buttons.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Logo Button */
+
+
+  /* Collapsed Menu Icon */
+  .collapsed-menu-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+   
+  }
+  
+  .menu-line {
+    width: 100px;
+    height: 10px;
+    background-color: rgba(28, 61, 115, 0.9); /* Golden color */
+    border-radius: 2px;
+  }
+  
+  .menu-text {
+    font-size: 1.2em;
+    color: white;
+  }

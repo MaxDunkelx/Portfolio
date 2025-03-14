@@ -1,0 +1,118 @@
+.tower-defense {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #222;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.game-menu,
+.game-over {
+  text-align: center;
+}
+
+.game-menu h1,
+.game-over h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.game-menu button,
+.game-over button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.game-menu button:hover,
+.game-over button:hover {
+  background-color: #666;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.game-area {
+  background-color: #333;
+  border: 2px solid #555;
+}
+
+.upgrade-shop {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  text-align: center;
+}
+
+.upgrade-shop h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.upgrade-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.upgrade-box {
+  background-color: #555;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.upgrade-box button {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: #666;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upgrade-box button:hover {
+  background-color: #888;
+}
+
+.upgrade-box p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.game-over {
+  text-align: center;
+}
+
+.game-over h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.game-over button {
+  margin: 0 10px;
+}

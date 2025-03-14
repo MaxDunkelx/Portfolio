@@ -1,0 +1,136 @@
+/* Make the home container full screen */
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  color: white;
+}
+
+/* Background Video */
+.background-video {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Overlay Image (Logo) with "X" Mask Effect */
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/logo.jpg"); /* Use your logo as the overlay image */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  pointer-events: none;
+
+  /* X effect */
+  mask-image: linear-gradient(45deg, transparent 40%, black 40%, black 60%, transparent 60%),
+              linear-gradient(-45deg, transparent 40%, black 40%, black 60%, transparent 60%);
+  mask-position: calc(var(--x, -9999px) - 225px) calc(var(--y, -9999px) - 225px);
+  mask-repeat: no-repeat;
+  mask-size: 450px 450px;
+
+  /* WebKit prefix */
+  -webkit-mask-image: linear-gradient(45deg, transparent 40%, black 40%, black 60%, transparent 60%),
+                      linear-gradient(-45deg, transparent 40%, black 40%, black 60%, transparent 60%);
+  -webkit-mask-position: calc(var(--x, -9999px) - 225px) calc(var(--y, -9999px) - 225px);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 450px 450px;
+}
+
+/* Content Overlay */
+.overlay {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  max-width: 900px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+
+  max-height: 80vh;
+}
+
+/* Hero Section */
+.hero-section h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-section h2 {
+  font-size: 24px;
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0 auto 20px;
+}
+
+/* QR Code Section */
+.qr-section {
+  margin: 20px 0;
+}
+
+.qr-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* CTA Button */
+.cta-button {
+  padding: 12px 25px;
+  font-size: 20px;
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #ffdb4d;
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Allow page to scroll */
+body, html {
+  overflow-y: auto;
+  height: auto;
+}
