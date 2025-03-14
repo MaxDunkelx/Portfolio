@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Menu from "../src/component/menu.jsx"; // Import the Menu component
+import MakeMeMoney from "./pages/MakeMeMoney";
 import "./App.css";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/makememoney" element={<MakeMeMoney />} />
       </Routes>
     </Router>
   );

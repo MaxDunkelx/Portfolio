@@ -37,10 +37,8 @@ const Menu = () => {
         <button onClick={() => navigate("/projects")}>Projects</button>
         <button onClick={() => navigate("/about")}>About</button>
         <button onClick={() => navigate("/contact")}>Contact</button>
+        <button onClick={() => navigate("/makememoney")}>Make Me Money</button>
       </div>
-
-      {/* Logo Button */}
-      
 
       {/* Collapsed Menu Icon */}
       {isCollapsed && (

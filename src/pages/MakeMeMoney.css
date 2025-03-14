@@ -1,0 +1,49 @@
+/* MakeMeMoney.css */
+
+.make-money-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .make-money-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .make-money-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+  }
+  
+  .make-money-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .make-money-button:hover {
+    background-color: #ff4757;
+    transform: translateY(-3px);
+  }
+  
+  .make-money-button:active {
+    transform: translateY(0);
+  }
+  
