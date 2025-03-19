@@ -77,7 +77,7 @@ const MakeMeMoney = () => {
         <button
           className="make-money-button"
           onClick={() => {
-            window.location.href = "https://my-new-portfolio-teal-nine.vercel.app";
+            window.location.href = "https://www.example.com/share";
           }}
         >
           Share This Page
